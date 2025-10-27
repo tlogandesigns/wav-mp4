@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  audio-to-video:
+    build: .
+    container_name: audio-to-video-converter
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./outputs:/tmp/outputs
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=production
