@@ -7,7 +7,7 @@ from pathlib import Path
 import tempfile
 
 app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB max file size
+app.config['MAX_CONTENT_LENGTH'] = 250 * 1024 * 1024  # 250MB max file size
 app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
 app.config['OUTPUT_FOLDER'] = '/tmp/outputs'
 
